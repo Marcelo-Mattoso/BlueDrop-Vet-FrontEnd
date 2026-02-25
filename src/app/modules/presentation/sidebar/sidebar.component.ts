@@ -23,12 +23,12 @@ interface MenuItem {
 })
 export class SidebarComponent {
   menuItems: MenuItem[] = [
-    { label: 'Dashboard', iconName: 'heroicons/outline/briefcase', route: '/dashboard' },
-    { label: 'Pets', iconName: 'heroicons/outline/heart', route: '/pets' },
-    { label: 'Tutores', iconName: 'heroicons/outline/users', route: '/tutores' },
-    { label: 'Agendamentos', iconName: 'heroicons/outline/calendar-days', route: '/appointments' },
-    { label: 'Financeiro', iconName: 'heroicons/outline/credit-card', route: '/financial' },
-    { label: 'Relatórios', iconName: 'heroicons/outline/document-chart-bar', route: '/reports' }
+    { label: 'Dashboard', iconName: 'heroBriefcase', route: '/dashboard' },
+    { label: 'Pets', iconName: 'heroHeart', route: '/pets' },
+    { label: 'Tutores', iconName: 'heroUsers', route: '/tutores' },
+    { label: 'Agendamentos', iconName: 'heroCalendarDays', route: '/appointments' },
+    { label: 'Financeiro', iconName: 'heroCreditCard', route: '/financial' },
+    { label: 'Relatórios', iconName: 'heroDocumentChartBar', route: '/reports' }
   ];
 
   private router = inject(Router);

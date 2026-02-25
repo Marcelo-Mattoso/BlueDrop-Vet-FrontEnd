@@ -43,25 +43,25 @@ export class DashboardComponent implements OnInit {
     {
       label: 'Pets Ativos',
       value: 145,
-      iconName: 'heroicons/outline/heart',
+      iconName: 'heroHeart',
       color: 'blue'
     },
     {
       label: 'Tutores',
       value: 89,
-      iconName: 'heroicons/outline/users',
+      iconName: 'heroUsers',
       color: 'green'
     },
     {
       label: 'Agendamentos Hoje',
       value: 12,
-      iconName: 'heroicons/outline/calendar-days',
+      iconName: 'heroCalendarDays',
       color: 'orange'
     },
     {
       label: 'Receita do Dia',
       value: 1800,
-      iconName: 'heroicons/outline/credit-card',
+      iconName: 'heroCreditCard',
       color: 'purple',
       formatter: (value) => `R$ ${value}`
     }
