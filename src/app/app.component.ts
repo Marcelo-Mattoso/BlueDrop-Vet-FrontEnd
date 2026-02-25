@@ -4,10 +4,9 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HeaderComponent, SidebarComponent],
-  template: `
+    selector: 'app-root',
+    imports: [RouterOutlet, HeaderComponent, SidebarComponent],
+    template: `
     <div class="app">
       <app-sidebar></app-sidebar>
       <div class="main-content">
@@ -18,7 +17,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .app {
       display: flex;
       min-height: 100vh;

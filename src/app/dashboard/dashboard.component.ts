@@ -25,10 +25,9 @@ interface Appointment {
 }
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-dashboard',
+    imports: [],
+    template: `
     <div class="dashboard">
       <div class="dashboard-header">
         <h1 class="dashboard-greeting">Olá, Marcelo 👋</h1>
@@ -113,7 +112,7 @@ interface Appointment {
       </div>
     </div>
   `,
-  styles: [`
+    styles: [`
     .dashboard {
       max-width: 1400px;
     }

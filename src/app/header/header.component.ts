@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [],
-  template: `
+    selector: 'app-header',
+    imports: [],
+    template: `
     <header class="header">
       <div class="header-logo">
         <div class="logo-icon">🐾</div>
@@ -35,7 +34,7 @@ import { Component } from '@angular/core';
       </div>
     </header>
   `,
-  styles: [`
+    styles: [`
     .header {
       display: flex;
       align-items: center;

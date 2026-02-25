@@ -2,10 +2,9 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar',
-  standalone: true,
-  imports: [RouterLink],
-  template: `
+    selector: 'app-sidebar',
+    imports: [RouterLink],
+    template: `
     <aside class="sidebar">
       @for (item of menuItems; track item.route) {
         <div 
@@ -19,7 +18,7 @@ import { Router, RouterLink } from '@angular/router';
       }
     </aside>
   `,
-  styles: [`
+    styles: [`
     .sidebar {
       width: 250px;
       background-color: white;
