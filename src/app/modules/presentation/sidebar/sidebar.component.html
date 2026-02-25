@@ -1,0 +1,26 @@
+<aside class="sidebar">
+  <nav class="nav-menu">
+    @for (item of menuItems; track item.route) {
+      <button 
+        type="button"
+        (click)="navigate(item.route)" 
+        class="menu-item"
+        [class.active]="isActive(item.route)"
+      >
+        <ng-icon [name]="item.iconName" size="20px" class="icon"></ng-icon>
+        <span class="label">{{ item.label }}</span>
+      </button>
+    }
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="footer-item">
+      <ng-icon name="heroicons/outline/cog-6-tooth" size="20px"></ng-icon>
+      <span class="label">Configurações</span>
+    </div>
+    <div class="footer-item">
+      <ng-icon name="heroicons/outline/arrow-left-on-rectangle" size="20px"></ng-icon>
+      <span class="label">Sair</span>
+    </div>
+  </div>
+</aside>

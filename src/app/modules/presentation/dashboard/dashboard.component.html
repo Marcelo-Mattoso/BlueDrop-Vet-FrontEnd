@@ -1,0 +1,92 @@
+<div class="dashboard">
+  <!-- Greeting Section -->
+  <div class="dashboard-header">
+    <h1 class="dashboard-greeting">Olá, Marcelo 👋</h1>
+    <p class="dashboard-location">BlueDrop Pets - Campinas</p>
+  </div>
+
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    @for (stat of stats(); track stat.label) {
+      <div class="stat-card">
+        <div class="stat-content">
+          <div class="stat-icon" [class]="stat.color">
+            <ng-icon [name]="stat.iconName" size="32px"></ng-icon>
+          </div>
+          <div class="stat-info">
+            <div class="stat-label">{{ stat.label }}</div>
+            <div class="stat-value">
+              @if (stat.formatter) {
+                {{ stat.formatter(stat.value) }}
+              } @else {
+                {{ stat.value }}
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <!-- Recent Appointments Section -->
+  <div class="recent-section">
+    <div class="recent-header">
+      <h2 class="recent-title">Atendimentos recentes</h2>
+      <a href="#" class="ver-todos">
+        Ver todos
+        <ng-icon name="heroicons/outline/chevron-right" size="16px"></ng-icon>
+      </a>
+    </div>
+
+    <!-- Loading State -->
+    @if (loading()) {
+      <div class="loading-state">
+        <p>Carregando agendamentos...</p>
+      </div>
+    }
+
+    <!-- Error State -->
+    @if (error()) {
+      <div class="error-state">
+        <p>{{ error() }}</p>
+      </div>
+    }
+
+    <!-- Table -->
+    @if (!loading() && !error()) {
+      <table class="appointments-table">
+        <thead>
+          <tr>
+            <th>Pet</th>
+            <th>Tutor</th>
+            <th>Serviço</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (appointment of recentAppointments(); track appointment.petName) {
+            <tr>
+              <td>
+                <div class="pet-info">
+                  <div class="pet-avatar">{{ appointment.avatar }}</div>
+                  <div class="pet-details">
+                    <span class="pet-name">{{ appointment.petName }}</span>
+                    <span class="pet-breed">{{ appointment.petBreed }}</span>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="tutor-name">{{ appointment.tutorName }}</div>
+              </td>
+              <td class="service-cell">{{ appointment.service }}</td>
+              <td class="date-cell">
+                {{ appointment.date }}<br />
+                {{ appointment.time }}
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    }
+  </div>
+</div>

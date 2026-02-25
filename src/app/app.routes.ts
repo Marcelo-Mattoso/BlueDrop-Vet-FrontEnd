@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './modules/presentation/dashboard/dashboard.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -7,7 +7,7 @@ export const routes: Routes = [
   { path: 'home', component: DashboardComponent },
   { path: 'tutores', component: DashboardComponent },
   { path: 'pets', component: DashboardComponent },
-  { path: 'agenda', component: DashboardComponent },
-  { path: 'financeiro', component: DashboardComponent },
-  { path: 'configuracoes', component: DashboardComponent },
+  { path: 'appointments', component: DashboardComponent },
+  { path: 'financial', component: DashboardComponent },
+  { path: 'reports', component: DashboardComponent },
 ];
